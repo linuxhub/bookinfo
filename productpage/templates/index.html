@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+{% block metas %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}
+
+{% block styles %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="static/bootstrap/css/bootstrap-theme.min.css">
+{% endblock %}
+{% block scripts %}
+<!-- Latest compiled and minified JavaScript -->
+<script src="static/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block title %}Simple Bookstore App{% endblock %}
+{% block content %}
+<p>
+    <h3>你好! 这是一个简单的书店应用程序, 包含三个服务, 如下所示</h3>
+</p>
+{% autoescape false %}
+{{ serviceTable }}
+{% endautoescape %}
+<p>
+    <h4>点击下面的链接, 以 Normal用户 或 Test用户 的身份自动生成对后端的请求</h4>
+</p>
+<p><a href="/productpage?u=normal">用户 ( Normal ) </a></p>
+<p><a href="/productpage?u=test">用户 ( Test ) </a></p>
+{% endblock %}
