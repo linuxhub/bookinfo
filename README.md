@@ -2,7 +2,6 @@
 
 ![](https://raw.githubusercontent.com/linuxhub/bookinfo/main/bookinfo.jpg)
 
-
 ```bash
 
 $ kubectl get deployment
